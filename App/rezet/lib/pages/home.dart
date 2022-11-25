@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:rezet/pages/google_map.dart';
 import 'package:rezet/pages/homepage.dart';
 
 class Home extends StatefulWidget {
@@ -25,6 +26,15 @@ class _HomeState extends State<Home> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const HomePage()),
+                    );
+                  }),
+                  IconButton(
+                  color: Colors.black,
+                  icon: Icon(Icons.map),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const GoogleMapsPage()),
                     );
                   }),
             ]),

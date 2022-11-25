@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rezet/pages/home.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import 'model/Model.dart';
 import 'pages/homepage.dart';
 
-void main() {
+//late Box box;
+void main() async {
+  await Hive.initFlutter();
+  var box = await Hive.openBox('mybox');
   runApp(const MyApp());
 }
 

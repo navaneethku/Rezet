@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rezet/pages/home.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:rezet/pages/intro_screen.dart';
+import 'package:rezet/pages/loginpage.dart';
 
 import 'model/Model.dart';
 import 'pages/homepage.dart';
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       create: (context) => CartModel(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Home(),
+        home: IntroScreen()
       ),
     );
   }

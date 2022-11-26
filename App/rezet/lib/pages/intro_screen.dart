@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rezet/pages/home.dart';
+import 'package:rezet/pages/loginpage.dart';
 import 'homepage.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -17,17 +19,17 @@ class IntroScreen extends StatelessWidget {
               padding: const EdgeInsets.only(
                 left: 100.0,
                 right: 100.0,
-                top: 120,
-                bottom: 20,
+                top: 80,
+                bottom: 0,
               ),
-              child: Image.asset('lib/images/avocado.png'),
+              child: Image.asset('lib/Assets/logo.png'),
             ),
 
             // we deliver groceries at your doorstep
             Padding(
               padding: const EdgeInsets.all(28.0),
               child: Text(
-                'We deliver groceries at your doorstep',
+                'We at Rezet help you get back to fit',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.notoSerif(
                     fontSize: 36, fontWeight: FontWeight.bold),
@@ -36,15 +38,22 @@ class IntroScreen extends StatelessWidget {
 
             // groceree gives you fresh vegetables and fruits
             Text(
-              'Fresh items everyday',
+              'We track your daily activities and help you find out lifestyle diseases!',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey[700],
               ),
             ),
-
-            const SizedBox(height: 24),
+            SizedBox(height: 30),
+            Text(
+              'If you are diagnosed with lifestyle diseases, we will help you Rezet your life :)',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey[700],
+              ),
+            ),
 
             const Spacer(),
 
@@ -54,15 +63,15 @@ class IntroScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return HomePage();
+                    return LoginPage();
                   },
                 ),
               ),
               child: Container(
-                padding: const EdgeInsets.all(24),
+                padding: const EdgeInsets.all(18),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
-                  color: const Color.fromARGB(255, 112, 91, 222),
+                  color: Color.fromARGB(255, 10, 156, 210),
                 ),
                 child: const Text(
                   "Get Started",
